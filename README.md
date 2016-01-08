@@ -7,10 +7,9 @@ A proxy of AlertDialog for Android that provides input and validation features.
 
 ### Usage
 
-+ Put `InputDialog` into your project and `dialog_input_layout.xml` and `dialog_bottom_line.9.png` into your resource folder.
-+ User InputDialog in a way just like AlertDialog.
++ Put `InputDialog` into your project and `dialog_input_layout.xml` and `dialog_bottom_line.9.png` into your resource folder and use InputDialog in the way just like AlertDialog.
 ```java
-new InputDialog.Builder(getActivity())
+new InputDialog.Builder(context)
         .setTitle("新建文件夹")
         .setInputDefaultText("/sdcard/my")
         .setInputMaxWords(20)
@@ -44,4 +43,31 @@ new InputDialog.Builder(getActivity())
             }
         })
         .show();
+```
+
+### Extensions
+
++ Customize your layout
+
+Call build method `setView(int layoutResId, int editTextId)` to apply your EditText layout.
+```java
+new InputDialog.Builder(context)
+        .setView(R.layout.my_edit_text, R.id.my_edit_text)
+```
+
++ Apply input validation
+
+Sometimes you are unwilling to dismiss your dialog after clicking its buttons, instead, you may need an input validation to intercept the default action of dismissing, just call build method `interceptButtonAction(ButtonActionIntercepter intercepter)` to catch illegal input and do whatever you want.
+```java
+new InputDialog.Builder(context)
+        .interceptButtonAction(new InputDialog.ButtonActionIntercepter() { // 拦截按钮行为
+            @Override
+            public boolean onInterceptButtonAction(int whichButton, CharSequence inputText, InputDialog dialog) {
+                if ("/sdcard/my".equals(inputText) && whichButton == DialogInterface.BUTTON_POSITIVE) {
+                    CN21Toast.showToast(getActivity(), "此文件夹已存在");
+                    return true;
+                }
+                return false;
+            }
+        })
 ```
