@@ -34,9 +34,10 @@ new InputDialog.Builder(context)
         })
         .interceptButtonAction(new InputDialog.ButtonActionIntercepter() { // 拦截按钮行为
             @Override
-            public boolean onInterceptButtonAction(int whichButton, CharSequence inputText, InputDialog dialog) {
+            public boolean onInterceptButtonAction(int whichButton, CharSequence inputText) {
                 if ("/sdcard/my".equals(inputText) && whichButton == DialogInterface.BUTTON_POSITIVE) {
-                    CN21Toast.showToast(getActivity(), "此文件夹已存在");
+                    // TODO 此文件夹已存在，在此做相应的提示处理
+                    // 以及return true拦截此按钮默认行为
                     return true;
                 }
                 return false;
@@ -64,9 +65,10 @@ Just call build method `interceptButtonAction(ButtonActionIntercepter intercepte
 new InputDialog.Builder(context)
         .interceptButtonAction(new InputDialog.ButtonActionIntercepter() { // 拦截按钮行为
             @Override
-            public boolean onInterceptButtonAction(int whichButton, CharSequence inputText, InputDialog dialog) {
+            public boolean onInterceptButtonAction(int whichButton, CharSequence inputText) {
                 if ("/sdcard/my".equals(inputText) && whichButton == DialogInterface.BUTTON_POSITIVE) {
-                    CN21Toast.showToast(getActivity(), "此文件夹已存在");
+                    // TODO 此文件夹已存在，在此做相应的提示处理
+                    // 以及return true拦截此按钮默认行为
                     return true;
                 }
                 return false;
