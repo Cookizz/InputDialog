@@ -498,7 +498,7 @@ public class InputDialog {
 
         private boolean onInterceptButtonAction(int buttonType, CharSequence text) {
             if (buttonActionIntercepter != null) {
-                boolean intercept = buttonActionIntercepter.onInterceptButtonAction(buttonType, text, inputDialog);
+                boolean intercept = buttonActionIntercepter.onInterceptButtonAction(buttonType, text);
                 if (intercept) {
                     mHandler.interceptButtonAction();
                     return true;
@@ -647,6 +647,6 @@ public class InputDialog {
          *                   DialogInterface.BUTTON_NEGATIVE, DialogInterface.BUTTON_NEUTRAL
          * @return true if you need to intercept the inherent behavior, vise versa.
          */
-        boolean onInterceptButtonAction(int whichButton, CharSequence inputText, InputDialog dialog);
+        boolean onInterceptButtonAction(int whichButton, CharSequence inputText);
     }
 }
