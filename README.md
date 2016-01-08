@@ -7,7 +7,7 @@ A proxy of AlertDialog for Android that provides input and validation features.
 
 ### Use case
 
-+ Put `InputDialog` into your project and `dialog_input_layout.xml` and `dialog_bottom_line.9.png` into your resource folder and use InputDialog in the way just like AlertDialog.
++ Put `InputDialog` into your project and put `dialog_input_layout.xml`, `dialog_bottom_line.9.png` into your resource folder and use InputDialog in the way just like AlertDialog.
 ```java
 new InputDialog.Builder(context)
         .setTitle("新建文件夹")
