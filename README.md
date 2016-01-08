@@ -2,7 +2,8 @@
 A proxy class of AlertDialog that provides input and validation features.
 
 ### Appearance
-![demo](http://7xawtr.com1.z0.glb.clouddn.com/input_dialog.png)
+
+![demo](http://7xawtr.com1.z0.glb.clouddn.com/input_dialog2.png)
 
 ### Usage
 
