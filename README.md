@@ -45,7 +45,7 @@ new InputDialog.Builder(context)
         .show();
 ```
 
-### In detail
+### Advanced
 
 + Customize your layout
 
