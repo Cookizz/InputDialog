@@ -57,7 +57,9 @@ new InputDialog.Builder(context)
 
 + Apply input validation
 
-Sometimes you are unwilling to dismiss your dialog after clicking its buttons, instead, you may need an input validation to intercept the default action of dismissing, just call build method `interceptButtonAction(ButtonActionIntercepter intercepter)` to catch illegal input and do whatever you want.
+Sometimes you are unwilling to dismiss your dialog after clicking its buttons, instead, you may need an input validation to intercept the default action of dismissing.
+
+Just call build method `interceptButtonAction(ButtonActionIntercepter intercepter)` to catch illegal input and do whatever you want.
 ```java
 new InputDialog.Builder(context)
         .interceptButtonAction(new InputDialog.ButtonActionIntercepter() { // 拦截按钮行为
