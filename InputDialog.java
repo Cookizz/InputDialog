@@ -1,5 +1,3 @@
-package com.cn21.ui.library.alert;
-
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -15,8 +13,6 @@ import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-
-import com.cn21.ui.library.R;
 
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
