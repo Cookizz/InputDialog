@@ -1,5 +1,5 @@
 # InputDialog
-A proxy of AlertDialog that provides input and validation features.
+A proxy of AlertDialog for Android that provides input and validation features.
 
 ### Appearance
 
