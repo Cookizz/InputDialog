@@ -49,7 +49,7 @@ new InputDialog.Builder(context)
 
 + Customize your layout
 
-Call build method `setView(int layoutResId, int editTextId)` to apply your EditText layout.
+Call build method `setView(int layoutResId, int editTextId)` to apply your EditText layout. The second parameter instructs you to bind your target EditText by id.
 ```java
 new InputDialog.Builder(context)
         .setView(R.layout.my_edit_text, R.id.my_edit_text)
