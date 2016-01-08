@@ -1,5 +1,5 @@
 # InputDialog
-A proxy class of AlertDialog that provides input and validation features.
+A proxy of AlertDialog that provides input and validation features.
 
 ### Appearance
 
