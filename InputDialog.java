@@ -523,7 +523,7 @@ public class InputDialog {
             if (!TextUtils.isEmpty(inputDefaultText)) {
                 input.setText(inputDefaultText);
                 // Move text cursor to the end if there are default texts.
-                int len = Math.min(inputMaxWords, inputDefaultText.length());
+                int len = inputMaxWords >= 0 ? Math.min(inputMaxWords, inputDefaultText.length()) : inputDefaultText.length();
                 input.setSelection(len);
             }
             if (!TextUtils.isEmpty(inputHint)) {
