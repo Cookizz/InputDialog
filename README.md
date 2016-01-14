@@ -63,7 +63,7 @@ Sometimes you are unwilling to dismiss your dialog after clicking its buttons. I
 Just call build method `interceptButtonAction(ButtonActionIntercepter intercepter)` to catch illegal input and do whatever you want.
 ```java
 new InputDialog.Builder(context)
-        .interceptButtonAction(new InputDialog.ButtonActionIntercepter() { // 拦截按钮行为
+        .interceptButtonAction(new InputDialog.ButtonActionIntercepter() { // 拦截按钮默认行为
             @Override
             public boolean onInterceptButtonAction(int whichButton, CharSequence inputText) {
                 if ("/sdcard/my".equals(inputText) && whichButton == DialogInterface.BUTTON_POSITIVE) {
